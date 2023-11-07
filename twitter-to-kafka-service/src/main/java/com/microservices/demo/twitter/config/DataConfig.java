@@ -12,5 +12,10 @@ import java.util.List;
 public class DataConfig {
 
     private List<String> twitterKeywords;
+    private Boolean enableMockTweets;
+    private Integer mockMinTweetLength;
+    private Integer mockMaxTweetLength;
+    private Long mockSleepMs;
+
 }
 
