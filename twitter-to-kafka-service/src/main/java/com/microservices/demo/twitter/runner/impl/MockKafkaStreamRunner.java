@@ -1,6 +1,6 @@
 package com.microservices.demo.twitter.runner.impl;
 
-import com.microservices.demo.twitter.config.DataConfig;
+import com.microservices.demo.config.TwitterKafkaDataConfig;
 import com.microservices.demo.twitter.exception.ServiceException;
 import com.microservices.demo.twitter.listener.TwitterKafkaStatusListener;
 import com.microservices.demo.twitter.runner.StreamRunner;
@@ -30,7 +30,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @ConditionalOnProperty(name = "twitter-to-kafka-service.enable-mock-tweets", havingValue = "true")
 public class MockKafkaStreamRunner implements StreamRunner {
 
-    private final DataConfig config;
+    private final TwitterKafkaDataConfig config;
     private final TwitterKafkaStatusListener listener;
     private static final SecureRandom RANDOM = new SecureRandom();
     private static final String[] WORDS = new String[]{

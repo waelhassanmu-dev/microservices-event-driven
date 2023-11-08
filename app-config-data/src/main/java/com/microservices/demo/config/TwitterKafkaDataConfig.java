@@ -1,4 +1,4 @@
-package com.microservices.demo.twitter.config;
+package com.microservices.demo.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -9,7 +9,7 @@ import java.util.List;
 @Data
 @Configuration
 @ConfigurationProperties(prefix = "twitter-to-kafka-service")
-public class DataConfig {
+public class TwitterKafkaDataConfig {
 
     private List<String> twitterKeywords;
     private Boolean enableMockTweets;
